@@ -10,7 +10,7 @@ workflows:
           flutter create --platforms=android --org com.arhamelectric .
       - name: Get packages
         script: flutter pub get
-      - name: Analyze project
+      
         script: flutter analyze
       - name: Build release APK
         script: flutter build apk --release
