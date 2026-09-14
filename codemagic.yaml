@@ -2,24 +2,17 @@ workflows:
   arham_android_apk:
     name: Arham Electric Android APK
     max_build_duration: 60
-    i
-
     environment:
       flutter: stable
-
     scripts:
       - name: Create Android platform files
         script: |
           flutter create --platforms=android --org com.arhamelectric .
-
       - name: Get packages
         script: flutter pub get
-
       - name: Analyze project
         script: flutter analyze
-
       - name: Build release APK
         script: flutter build apk --release
-
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
